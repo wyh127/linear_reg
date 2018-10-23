@@ -226,9 +226,9 @@ The proportion is 97% and is consistent with theorectical expectation which is 9
 ### a.
 ```{r}
 copier <- read.table("CH01PR20.txt")
-library(ggplot2)
 pred <- predict(lm(V1~V2, copier))
-ggplot(copier, aes(x = V2, y = V1)) + geom_point() + geom_line(aes(y = pred)) + geom_smooth(method = "lm", level = 0.9)
+ggplot(copier, aes(x = V2, y = V1)) + geom_point() + geom_line(aes(y = pred)) +
+  geom_smooth(method = "lm", level = 0.9)
 ```
 The plot is provided above.
 
