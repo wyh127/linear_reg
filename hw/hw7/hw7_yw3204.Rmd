@@ -25,7 +25,7 @@ ggplot(steroid, aes(x = X1, y = Y)) + geom_point() +
   labs(x = "age", y = "steroid")
 ```
 
-The fitted line is $Y = -26.33 + 4.87 * X - 0.12 * X^2$. It appears to be a good fit according to the plot. And the coefficient of determination is 0.8143 which further consolidates the conclution.
+The fitted line is $Y = -26.33 + 4.87 * X - 0.12 * X^2$. It appears to be a good fit according to the plot. And the coefficient of determination is 0.81 which further consolidates the conclution.
 
 ### b.
 ```{r}
@@ -64,7 +64,7 @@ for(i in c(10, 15, 20)) {
   print(ci)
 }
 ```
-We calculatev the joint interval estimates based on the Bonferroni procedure because its intervals are narrower. And according to the result above, we say the joint intervals are $(7.57, 13.57)$, $(17.24, 23.03)$ and $(21.00, 26.57)$ seperately for age 10, 15 and 20. It means the probabilty that the mean responses at the three levels fall into their respective intervals simultaneously is 0.99.
+We calculatev the joint interval estimates based on the Bonferroni procedure because its interval is narrower. And according to the result above, we say the joint intervals are $(7.57, 13.57)$, $(17.24, 23.03)$ and $(21.00, 26.57)$ seperately for age 10, 15 and 20. It means the probabilty that the mean responses at the three levels fall into their respective intervals simultaneously is 0.99.
 
 ### d.
 ```{r}
