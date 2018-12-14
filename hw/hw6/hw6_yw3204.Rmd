@@ -116,8 +116,21 @@ The decision rule is if the calculated F-statistic is greater than $F(0.99, 2, 7
 ## 7.16
 ### a.
 ```{r}
-bp <- read.table("CH06PR05.txt")
+bp <- read.table("/Users/apple/Desktop/semester_1/3.LinearRegressionModels/data/CH06PR05.txt")
 names(bp) <- c("Y", "X1", "X2")
+
+# lm12 <- lm(Y~., bp)
+# 
+# lm1 <- lm(Y~X1, bp)
+# lm_tmp <- lm(X2~X1, bp)
+# Y_1 <- bp$Y-fitted(lm1)
+# X2_hat <- bp$X2-fitted(lm_tmp)
+# lm3 <- lm(Y_1~X2_hat)
+# 
+# anova(lm1)
+# anova(lm12)
+# anova(lm_tmp)
+# summary()
 
 s_bp <- apply(bp, 2, function(x) (x-mean(x))/sd(x))
 
